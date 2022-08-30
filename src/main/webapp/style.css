@@ -1,0 +1,30 @@
+@charset "UTF-8";
+
+body {
+	text-align:center;
+ 	   margin:  0 auto;            /* 中央寄せ */
+}
+
+h1{
+	font-size: 50px;
+	margin-bottom:0px;
+}
+
+img{
+	width: 100%; 
+	max-width: 800px;
+}
+
+.btm{
+	padding:20px 70px;
+}
+
+.btmyes{
+	padding:3em 15em;
+	margin-right:3em;
+}
+
+.btmno{
+	padding:3em 15em;
+	margin-left:3em;
+}
