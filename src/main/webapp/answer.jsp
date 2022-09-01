@@ -16,38 +16,40 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="style.css">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<%if(currentCount < 3 ){ %>
+	<link rel="stylesheet" href="comment.css">
+	<%}else if(currentCount < 6){ %>
+	<link rel="stylesheet" href="comment2.css">
+	<%}else{ %>
+	<link rel="stylesheet" href="comment3.css">
+	<%} %>
 	<title>答え画面</title>
 </head>
 <body>
-	<!----- header----->
-	 <header></header>
-	 <nav></nav>
-	 <!----- /header ----->
-	 <!----- main ----->
-	 <article>
-	 <section>
-	 	<%--正解有無を表示 --%>
-		<h1><%=ansTitle %></h1>
-		<%--解答説明を表示 --%>
-		<p><%=ansMessage %></p>
-	
-		<%if(currentCount < maxCount ){ %>
+
+	  <div class="comment">
+        <div class="ballon">
+            <h1><%=ansTitle %></h1>
+            <p><%=ansMessage %></p>
+        </div>
+    </div>
+
+    <div class="buttom">
+    	
+    	<%if(currentCount < maxCount ){ %>
 			<% session.setAttribute("currentcount", currentCount); %>
 			<form method="post" action="NextQuestionServlet">
-				<input class="btm" type="submit" name="btn" value="次の問題へ進む">
+				<input class="next" type="submit" name="btn" value="次の問題へ進む">
 			</form>			
 		<%}else{ %>
 			<form method="post" action="NextQuestionServlet">
-				<input class="btm" type="submit" name="btn" value="結果画面へ">
+				<input class="next" type="submit" name="btn" value="結果画面へ">
 			</form>			
 		<%} %>
-		
-	 </section>
-	 </article>
-	 <!----- /main ----->
-	 <!----- footer ----->
-	 <footer></footer>
-	 <!----- /footer ----->
+    
+    
+    </div>
 </body>
 </html>

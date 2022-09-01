@@ -10,29 +10,33 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="style.css">
+	<%if(currentCount < 3 ){ %>
+	<link rel="stylesheet" href="question.css">
+	<%}else if(currentCount < 6){ %>
+	<link rel="stylesheet" href="question2.css">
+	<%}else{ %>
+	<link rel="stylesheet" href="question3.css">
+	<%} %>
 	<title>問題</title>
 </head>
 <body>
 
-	<!----- header----->
-	 <header></header>
-	 <nav></nav>
-	 <!----- /header ----->
-	 <!----- main ----->
-	 <article>
-	 <section>
-	 	<h1>問題</h1>
-		<p><%=qe.getQuestion()%></p>
-		<form method="post" action="AnswerServlet">
-			<input class="btmyes" type="submit" name="btn" value="YES">
-			<input class="btmno" type="submit" name="btn" value="NO">
-		</form>
-	 </section>
-	 </article>
-	 <!----- /main ----->
-	 <!----- footer ----->
-	 <footer></footer>
-	 <!----- /footer ----->
+
+
+	<div class="question">
+        <div class="ballon">
+            <h2>問題</h2>
+            <p><%=qe.getQuestion()%></p>
+        </div>
+    </div>
+
+    <div class="buttom">
+       <form method="post" action="AnswerServlet">
+                <input class="yes" type="submit" name="btn" value="YES">
+				<input class="no" type="submit" name="btn" value="NO">
+        </form>
+    </div>
+    
+    
 </body>
 </html>
