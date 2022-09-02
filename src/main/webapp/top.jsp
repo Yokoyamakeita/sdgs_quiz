@@ -5,29 +5,34 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="top.css">
 
 <title>スタート画面</title>
 </head>
 <body>
-	<!----- header----->
-	 <header></header>
-	 <nav></nav>
-	 <!----- /header ----->
-	 <!----- main ----->
-	 <article>
-	 <section>
 	 
-	 	<h1>SDGsクイズ</h1>
-		<img src="sdg_poster_ja_2021.png">
-		<form method="post" action="QuizServlet">
-			<input class="btm" type="submit" value="スタート">
-		</form>
-	 </section>
-	 </article>
-	 <!----- /main ----->
-	 <!----- footer ----->
-	 <footer></footer>
-	 <!----- /footer ----->
+	 
+	 <div class="wrapper">
+	 
+        <div class="logo">
+            <img src="images/logo.gif" alt="logo">
+        </div>
+		<h1>SDGsクイズ</h1>
+        <div class="hiyoko">
+            <img src="images/hiyoko.png" style="display: block; margin: auto;" alt="ひよこ">
+        </div>
+
+        <div class="form">
+        <form method="post" action="QuizServlet">
+            <input type="submit" value="クイズスタート" class="button">
+        </form>
+        </div>
+    </div>
+	 
+	 
+	 
+	 
+	 
+	 
 </body>
 </html>

@@ -56,9 +56,11 @@ public class QuizServlet extends HttpServlet {
 			//JCBDドライバのロード
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			//データベースへの接続
-			//Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/tech_c_itpj?useSSL=false", "root","password");
+			Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/tech_c_itpj?useSSL=false", "root","password");
 			
-			Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/mysql?useSSL=false", "root","");
+			//横山使用
+//			Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/mysql?useSSL=false", "root","");
+			
 			//ステートメントの作成
 			Statement stmt = con.createStatement();
 			//SQL文の実行（参照系）
@@ -110,20 +112,6 @@ public class QuizServlet extends HttpServlet {
 			//問題画面へ表示
 			ServletContext s = request.getServletContext();
 			RequestDispatcher rd = s.getRequestDispatcher("/quiz.jsp");
-			
-			//朝昼晩の分岐
-			
-//			RequestDispatcher rd = null;
-//			if((int)session.getAttribute("currentcount") < 3) {
-//				ServletContext s = request.getServletContext();
-//				rd = s.getRequestDispatcher("/quiz1.jsp");
-//			}else if((int)session.getAttribute("currentcount") < 6) {
-//				ServletContext s = request.getServletContext();
-//				rd = s.getRequestDispatcher("/quiz2.jsp");
-//			}else {
-//				ServletContext s = request.getServletContext();
-//				rd = s.getRequestDispatcher("/quiz3.jsp");
-//			}
 			
 		
 			
