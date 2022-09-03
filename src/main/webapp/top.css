@@ -30,15 +30,21 @@ h1{
     position: absolute;
     bottom: 20%;
     left: 42.5%;
+    text-align: center;
 }
 
-.hiyoko>img{
-    padding-top: 10px;
-    width: 300px;
-    height: 300px;
-    
-    /* width: 500px; */
+
+.hiyoko{
+	width:300px;
+	margin-right:auto;
+	margin-left:auto;
 }
+
+.image{
+	width:300px;
+	
+}
+
 
 .button {
     display       : inline-block;
@@ -46,7 +52,7 @@ h1{
     font-size     : 17pt;        /* 文字サイズ */
     text-align    : center;      /* 文字位置   */
     cursor        : pointer;     /* カーソル   */
-    padding       : 38px 66px;   /* 余白       */
+    padding       : 30px 66px;   /* 余白       */
     background    : #007fff;     /* 背景色     */
     color         : #ffffff;     /* 文字色     */
     line-height   : 1em;         /* 1行の高さ  */

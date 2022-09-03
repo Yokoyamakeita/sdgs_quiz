@@ -17,9 +17,11 @@
         <div class="logo">
             <img src="images/logo.gif" alt="logo">
         </div>
+		
 		<h1>SDGsクイズ</h1>
+		
         <div class="hiyoko">
-            <img src="images/hiyoko.png" style="display: block; margin: auto;" alt="ひよこ">
+            <img src="images/tophiyo.png" class="image" alt="ひよこ">
         </div>
 
         <div class="form">

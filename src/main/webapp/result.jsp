@@ -29,9 +29,17 @@
     	<div class="button">
             <a href="top.jsp">TOP画面へ！！</a>
         </div>
+        
+        
+        <%if(ansCount < 7 ){ %>
+        <div class="hiyoko">
+         	<img src="./images/endhiyo.png">
+        </div>
+        <%}else{ %>
         <div class="hiyoko">
             <img src="./images/hiyoko.png">
         </div>
+        <%} %>
     </div>
     
 	 
