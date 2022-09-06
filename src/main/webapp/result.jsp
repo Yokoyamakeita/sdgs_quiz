@@ -21,7 +21,7 @@
 
     <div class="result">
         <div class="ballon">
-            <h1>正答数は<%=ansCount %>です。（<%= ++maxCount%>問満点）</h1>
+            <h1>正答数は<%=ansCount %>です。（<%= maxCount%>問満点）</h1>
         </div>
     </div>
 

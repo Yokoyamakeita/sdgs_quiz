@@ -56,10 +56,10 @@ public class QuizServlet extends HttpServlet {
 			//JCBDドライバのロード
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			//データベースへの接続
-			Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/tech_c_itpj?useSSL=false", "root","password");
+//			Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/tech_c_itpj?useSSL=false", "root","password");
 			
 			//横山使用
-//			Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/mysql?useSSL=false", "root","");
+			Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/mysql?useSSL=false", "root","");
 			
 			//ステートメントの作成
 			Statement stmt = con.createStatement();
@@ -100,7 +100,8 @@ public class QuizServlet extends HttpServlet {
 			//問題出題回数
 			session.setAttribute("currentcount", 0);
 			//問題出題上限(0以上)
-			session.setAttribute("maxcount", 9);
+			//session.setAttribute("maxcount", 9);
+			session.setAttribute("maxcount", 10);
 			//正解数
 			session.setAttribute("anscount", 0);
 
